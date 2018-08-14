@@ -6,11 +6,12 @@
 
 <script>
 import Form from './components/Form'
+import CardForm from './components/CardForm'
 
 export default {
   name: 'App',
   components: {
-    Form
+    Form, CardForm
   },
   data(){
     return {
