@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Form from '@/components/Form'
 
 
+
 Vue.use(Router)
 
 export default new Router({
@@ -10,7 +11,7 @@ export default new Router({
     {
       path: '/',
       name: 'Form',
-      component: Form
+      component: Form, 
     }
   ]
 })
