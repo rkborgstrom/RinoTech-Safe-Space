@@ -1,20 +1,21 @@
 <template>
   <div id="app">
       <router />
-      <Header/>
-      <Form/>
+      <Form />
+      <Modal />
   </div>
 </template>
 
 <script>
 import Form from './components/Form'
-import Header from './components/Header'
+import Modal from './components/Modal'
+
 
 export default {
   name: 'App',
   components: {
     Form,
-    Header
+    Modal
   },
   data(){
     return {
