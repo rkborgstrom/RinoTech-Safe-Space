@@ -14,7 +14,8 @@ import Modal from './components/Modal'
 export default {
   name: 'App',
   components: {
-    Form
+    Form,
+    Modal
   },
   data(){
     return {
