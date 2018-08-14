@@ -1,6 +1,7 @@
 <template>
   <div id="app">
       <Form />
+      <CardForm />
   </div>
 </template>
 
@@ -15,7 +16,7 @@ export default {
   },
   data(){
     return {
-      teaFlavor: 'Mint'
+      
     }
   }
 }

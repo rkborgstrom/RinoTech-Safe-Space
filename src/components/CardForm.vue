@@ -1,14 +1,24 @@
 <template>
-    <b-card  bg-variant="dark" text-variant="white" title="Card Title">
-    <p class="card-text">
-    With supporting text below as a natural lead-in to additional content.
-    </p>
-    <b-button href="#" variant="primary">Go somewhere</b-button>
+<div>
+<b-card>
+    <b-form-textarea id="textarea1"
+                    v-model="text"
+                    placeholder="Enter something"
+                    :rows="3"
+                    :max-rows="6">
+    </b-form-textarea>
+    <!-- <pre class="mt-3">{{ text }}</pre> -->
+    <b-button href="#" variant="primary">Submit your Post</b-button>
 </b-card>
+</div>
 </template>
 
 <script>
-    export default {
-        
+export default {
+    data () {
+    return {
+        text: ''
     }
+}
+};
 </script>
