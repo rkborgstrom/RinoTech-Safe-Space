@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Form from '@/components/Form'
-
+import Header from 'vue-router'
 
 
 Vue.use(Router)
@@ -11,7 +11,12 @@ export default new Router({
     {
       path: '/',
       name: 'Form',
-      component: Form, 
+      component: Form
+    },
+    {
+      path: '/App',
+      name: 'Header',
+      component: Header
     }
   ]
 })
