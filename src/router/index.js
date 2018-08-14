@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Form from '@/components/Form'
-
+import Header from 'vue-router'
 
 Vue.use(Router)
 
@@ -13,9 +13,9 @@ export default new Router({
       component: Form
     },
     {
-      path: '/Select-option',
-      name: 'Select-option',
-      component: Select-Option
+      path: '/App',
+      name: 'Header',
+      component: Header
     }
   ]
 })
