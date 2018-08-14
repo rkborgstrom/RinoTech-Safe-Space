@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Form from '@/components/Form'
 import Header from 'vue-router'
 
+
 Vue.use(Router)
 
 export default new Router({
