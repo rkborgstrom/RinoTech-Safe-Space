@@ -1,13 +1,11 @@
 <template>
-    <div>
-        <h1{{Safe-Space}}/>
-    </div>
+    <header>
+        <h1>Hello</h1>
+    </header>
 </template>
 
 <script>
-export default {
-    
-}
+export default {}; 
 </script>
 
 <style>

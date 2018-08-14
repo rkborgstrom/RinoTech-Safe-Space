@@ -1,6 +1,8 @@
 <template>
   <div id="app">
       <router />
+      <Header/>
+      <Form/>
   </div>
 </template>
 
@@ -11,7 +13,8 @@ import Header from './components/Header'
 export default {
   name: 'App',
   components: {
-    Form
+    Form,
+    Header
   },
   data(){
     return {
