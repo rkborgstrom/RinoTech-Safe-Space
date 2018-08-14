@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+      <Header />
       <Form />
       <Modal />
   </div>
@@ -8,17 +9,18 @@
 <script>
 import Form from './components/Form'
 import Modal from './components/Modal'
-
+import Header from './components/Header'
 
 export default {
   name: 'App',
   components: {
+    Header,
     Form,
     Modal
   },
   data(){
     return {
-      teaFlavor: 'Mint'
+      
     }
   }
 }
