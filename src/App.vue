@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    
       <Header />
       <Modal />
       <Card />
@@ -14,7 +13,6 @@ import Card from './components/Card'
 import Modal from './components/Modal'
 import Footer from './components/Footer'
 
-
 const API_URL = "https://rinotech-safe-space.herokuapp.com/posts";
 
 export default {
@@ -27,27 +25,30 @@ export default {
   },
   data(){
     return {
-        posts: [],
-        apiURL:"https://rinotech-safe-space.herokuapp.com/posts"
-    }
-  },
 
-  mounted(){
-    fetch(this.apiURL)
-    .then(res => res.json())
-    .then((res)=>{
-      this.posts = res.reverse()
-      console.log(this.posts)
-    })
+    posts: [],
+        apiURL: "https://rinotech-safe-space.herokuapp.com/posts"
+      }
+    },
+  
+    mounted() {
+      fetch(this.apiURL, {
+          method: 'get',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          }
+        })
+        .then(res => res.json())
+        .then(data => {
+          this.posts = data
+          console.log(this.posts)
+        })
     }
-}
-
-  const logThis = (input) => {
-    console.log(input);
-    return input;
   }
-</script>
 
+</script>
+  
 <style>
 
 #app {
