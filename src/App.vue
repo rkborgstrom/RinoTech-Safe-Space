@@ -4,6 +4,7 @@
       <Header />
       <Form />
       <Modal />
+      <Footer/>
   </div>
 </template>
 
@@ -11,13 +12,15 @@
 import Form from './components/Form'
 import Modal from './components/Modal'
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 export default {
   name: 'App',
   components: {
     Header,
     Form,
-    Modal
+    Modal,
+    Footer
   },
   data(){
     return {
