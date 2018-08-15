@@ -25,7 +25,7 @@
                     <b-col>
                         <h4>
                             <div>
-                                <b-card @submit="onSubmit">
+                                <b-card @submit="onSubmit()">
                                     <b-form-textarea id="textarea1" v-model="text" placeholder="Add a comment..." :rows="3" :max-rows="6">
                                     </b-form-textarea>
                                     <pre class="mt-3">{{ text }}</pre>
