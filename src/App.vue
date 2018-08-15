@@ -1,11 +1,9 @@
 <template>
   <div id="app">
-  
-    <Header />
-    <CardForm />
-    <Modal />
-    <Footer />
-  
+      <Header />
+      <Modal />
+      <Card />
+      <Footer />
   </div>
 </template>
 
@@ -50,7 +48,15 @@
   }
 
 </script>
-
-<style>
   
+<style>
+
+#app {
+    height: 100%;
+    min-height: 100vh;
+    background: url("./assets/bgimage.jpg") repeat center center fixed;
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+}
 </style>
