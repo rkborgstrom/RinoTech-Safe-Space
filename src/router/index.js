@@ -24,6 +24,7 @@ export default new Router({
       name: 'Footer',
       component: Footer
     },
+    {
       path: '/App',
       name: 'Header',
       component: Header

@@ -21,10 +21,8 @@ import Footer from './components/Footer'
 export default {
   name: 'App',
   components: {
-    Form, CardForm, Footer
-    Header,
-    Form,
-    Modal
+    Form, CardForm, Footer,
+    Header, Modal
   },
   data(){
     return {

@@ -9,28 +9,52 @@
     </b-form-textarea>
     <!-- <pre class="mt-3">{{ text }}</pre> -->
     <b-button href="#" variant="primary">Submit your Post</b-button>
-</b-card>
 
+
+
+</b-card>
 
 </div>
 </template>
 
 
 <script>
+const API_URL = "https://rinotech-safe-space.herokuapp.com/";
 
 export default {
-    data () {
+    name: "Register",
+    data() {
     return {
-        text: '',
-        methods: {
-    getUserData(){
-        fetch('https://rinotech-safe-space.herokuapp.com/')
-        .then(resp => resp.json())
-        .then(resp => this.userData = resp)            
-
-        }
-    }    
-    }
-}
-}
+        registerURL: "https://rinotech-safe-space.herokuapp.com/",
+        form: {
+        username: "",
+        password: ""
+    },
+        show: true
+        // users: [],
+    };
+},
+    mounted() {
+    fetch(this.registerURL, {
+        method: "get",
+        mode: "cors",
+        credentials: "same-origin",
+        headers: new Headers({ "Content-Type": "application/json" })
+    }).then(resp => {
+      // if (!resp.ok) {
+      //   if (resp.status >= 400 || resp.status < 500) {
+      //     return resp.json().then(data => {
+      //       const err = { errorMessage: data.message };
+      //       throw err;
+      //     });
+      //   }
+      //   const err = { errorMessage: 'Blah' };
+      //   throw err;
+      // }
+      return resp.json().then(resp => {
+        console.log(resp);
+      });
+    });
+  }
+};
 </script>
