@@ -1,7 +1,7 @@
 <template>
 <b-card-footer>
     <small>2018</small>
-    <h6>All post are property and opionion of poster and shoudld not be considered legal and professional advice.</h6>
+    <small>All post are property and opionion of poster and shoudld not be considered legal and professional advice.</small>
 </b-card-footer>
 </template>
 
