@@ -1,9 +1,13 @@
 <template>
-    <b-jumbotron center bg-variant="info" text-variant="white" border-variant="dark">
-        <template slot="header">
-            Safe-Space
-        </template>
-    </b-jumbotron>
+<div>
+  <!-- Image and text -->
+  <b-navbar variant="dark" type="">
+    <b-navbar-brand href="#">
+      <img src="../assets/SafeSpaceLogo.png" height=60px width=60px class="d-inline-block align-top" alt="BV">
+
+    </b-navbar-brand>
+  </b-navbar>
+</div>
 </template>
 
 <script>
@@ -11,10 +15,5 @@ export default {};
 </script>
 
 <style>
-header {
-    display: flex;
-    align-content: center;
-    width: 100%;
-    border-radius: none;
-}
+
 </style>
