@@ -1,5 +1,4 @@
 <template>
-    
 <div>
   <!-- Image and text -->
   <b-navbar variant="dark" type="">
@@ -9,7 +8,6 @@
     </b-navbar-brand>
   </b-navbar>
 </div>
-    
 </template>
 
 <script>

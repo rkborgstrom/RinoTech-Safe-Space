@@ -5,8 +5,7 @@
       <CardForm />
       <Card />
       <Modal />
-      <Footer />
-      
+      <Footer/>
   </div>
 </template>
 
@@ -21,11 +20,10 @@ import Footer from './components/Footer'
 export default {
   name: 'App',
   components: {
-    CardForm, 
-    Footer,
-    Card,
     Header,
-    Modal
+    CardForm,
+    Modal,
+    Footer
   },
   data(){
     return {
