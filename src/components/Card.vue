@@ -1,11 +1,5 @@
 <template>
-
     <div>
-        <p class="ms">
-     A place where people from all walks of life to come together to 
-     discuss what their going through and also for others to give 
-     guidance along the way.
-            </p>
         <b-card class="pl-5 pr-5" header=" " header-text-variant="white" header-tag="header" 
         header-bg-variant="dark" footer="Karma Score" footer-tag="footer" footer-bg-variant="active" 
         footer-border-variant="dark">
@@ -34,7 +28,7 @@
                                 <b-card @submit="onSubmit">
                                     <b-form-textarea id="textarea1" v-model="text" placeholder="Add a comment..." :rows="3" :max-rows="6">
                                     </b-form-textarea>
-                                    <!-- <pre class="mt-3">{{ text }}</pre> -->
+                                    <pre class="mt-3">{{ text }}</pre>
                                     <b-button href="#" variant="primary">Submit</b-button>
                                 </b-card>
                             </div>
@@ -42,15 +36,18 @@
                     </b-col>
                 </b-row>
             </b-container>
-    
-        </b-card>
-    
+        </b-card> 
     </div>
 </template>
 
-
 <script>
-    export default {};
+     export default {
+    data() {
+      return {
+        text: ''
+      }
+    }
+  }
 </script>
 
 <style>
@@ -62,18 +59,11 @@
          color: grey;
      }
 
-     .ms {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         font-size: 1.5em;
-         padding-left: 60px;
-         padding-right: 60px;
-         background: rgb(255,255,254);
-         background: linear-gradient(90deg, rgba(255,255,254,1) 0%,
-          rgba(255,250,0,1) 49%, rgba(251,255,173,1) 100%);
-     }
      .topic {
          float: right;
+     }
+     .btn-primary {
+         color: black;
+         background: linear-gradient(90deg, rgba(255,185,28,1) 0%, rgba(255,221,58,1) 50%, rgba(255,215,45,1) 100%);;
      }
 </style>
