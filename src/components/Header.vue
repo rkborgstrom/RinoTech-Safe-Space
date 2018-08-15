@@ -17,5 +17,6 @@ header {
     display: flex;
     align-content: center;
     width: 100%;
+    border-radius: none;
 }
 </style>
