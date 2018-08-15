@@ -5,7 +5,6 @@
       <Modal />
       <Card />
       <Footer />
-
   </div>
 </template>
 
@@ -19,15 +18,14 @@ import Footer from './components/Footer'
 const API_URL = "https://rinotech-safe-space.herokuapp.com/posts";
 
 export default {
-    name: 'App',
-    components: {
-      Card,
-      Header,
-      Modal,
-      Footer
-    },
-
-    data(){
+  name: 'App',
+  components: {
+    Header,
+    CardForm,
+    Modal,
+    Footer
+  },
+  data(){
     return {
         posts: [],
         apiURL:"https://rinotech-safe-space.herokuapp.com/posts"
