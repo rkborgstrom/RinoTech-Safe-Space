@@ -1,37 +1,56 @@
 <template>
   <div id="app">
   
-      <Header />
-      <CardForm />
-      <Form />
-      <Modal />
-      <Footer />
-      
+    <Header />
+    <CardForm />
+    <Modal />
+    <Footer />
+  
   </div>
 </template>
 
 <script>
-import Header from './components/Header'
-import Form from './components/Form'
-import CardForm from './components/CardForm'
-import Modal from './components/Modal'
-import Footer from './components/Footer'
-
-
-export default {
-  name: 'App',
-  components: {
-    Form, CardForm, Footer,
-    Header, Modal
-  },
-  data(){
-    return {
-      
+  import Header from './components/Header'
+  import CardForm from './components/CardForm'
+  import Modal from './components/Modal'
+  import Footer from './components/Footer'
+  
+  const API_URL = "https://rinotech-safe-space.herokuapp.com/posts";
+  
+  export default {
+    name: 'App',
+    components: {
+      CardForm,
+      Header,
+      Modal,
+      Footer
+    },
+  
+    data() {
+      return {
+        posts: [],
+        apiURL: "https://rinotech-safe-space.herokuapp.com/posts"
+      }
+    },
+  
+    mounted() {
+      fetch(this.apiURL, {
+          method: 'get',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          }
+        })
+        .then(res => res.json())
+        .then(data => {
+          this.posts = data
+          console.log(this.posts)
+        })
     }
   }
-}
+
 </script>
 
 <style>
-
+  
 </style>
