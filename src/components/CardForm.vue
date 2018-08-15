@@ -17,16 +17,20 @@
 
 
 <script>
+
 export default {
     data () {
     return {
         text: '',
         methods: {
-            onSubmit() {
+    getUserData(){
+        fetch('https://rinotech-safe-space.herokuapp.com/')
+        .then(resp => resp.json())
+        .then(resp => this.userData = resp)            
 
-            }
         }
     }    
     }
-};
+}
+}
 </script>
