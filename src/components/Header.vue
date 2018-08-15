@@ -8,7 +8,6 @@
             </b-navbar-brand>
         </b-navbar>
     
-    
         <p class="ms">
             A place where people from all walks of life to come together to discuss what their going through and also for others to give guidance along the way.
         </p>
