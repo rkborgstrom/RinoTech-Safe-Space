@@ -2,7 +2,7 @@
   <div id="app">
       <Header />
       <Modal />
-      <Card />
+      <Card v-for="post in posts" :key="post.id" v-bind:post="post"/>
       <Footer />
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
   name: 'App',
   components: {
     Header,
-    Card,
+    Card ,
     Modal,
     Footer
   },
@@ -27,7 +27,7 @@ export default {
     return {
 
     posts: [],
-        apiURL: "https://rinotech-safe-space.herokuapp.com/posts"
+    apiURL: "https://rinotech-safe-space.herokuapp.com/posts"
       }
     },
   
