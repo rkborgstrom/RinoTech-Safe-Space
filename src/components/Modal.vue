@@ -1,6 +1,8 @@
 <template>
   <div>
-    <b-btn variant="success" v-b-modal.modal1>POST</b-btn>
+    <section class="button">
+      <b-btn variant="warning" v-b-modal.modal1>POST</b-btn>
+    </section>
     <b-modal id="modal1" title="What are you going through?">
       <b-form>
         <input required placeholder="Title">
@@ -8,20 +10,20 @@
       <br />
   
       <div>
-    <select v-model="selected">
-        <option disabled value="">Topics</option>
-        <option>Depression</option>
-        <option>Anxiety</option>
-        <option>Stress</option>
-        <option>LGBT</option>
-        <option>PTSD</option>
-        <option>Alcohol</option>
-        <option>Marital</option>
-        <option>Death</option>
-        <option>Loneliness</option>
-        <option>Family Issues</option>
-        <option>Other</option>
-    </select>
+        <select v-model="selected">
+          <option disabled value="">Topics</option>
+          <option>Depression</option>
+          <option>Anxiety</option>
+          <option>Stress</option>
+          <option>LGBT</option>
+          <option>PTSD</option>
+          <option>Alcohol</option>
+          <option>Marital</option>
+          <option>Death</option>
+          <option>Loneliness</option>
+          <option>Family Issues</option>
+          <option>Other</option>
+      </select>
         <br />
         <br />
         <span><strong>Selected:</strong> {{ selected }}</span>
@@ -51,11 +53,22 @@
   #modal1 {
     color: #007aff;
   }
-
-h6{
-  color: rosybrown;
-}
-
-
-
+  
+  h6 {
+    color: rosybrown;
+  }
+  
+  .btn {
+    width: 100%;
+    margin-top: 0;
+  }
+  
+  .btn-warning {
+    background: linear-gradient(90deg, rgba(255, 185, 28, 1) 0%, rgba(255, 221, 58, 1) 50%, rgba(255, 215, 45, 1) 100%);
+    ;
+  }
+  
+  .btn-warning:hover {
+    background-color: #e1ac74;
+  }
 </style>
