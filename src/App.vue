@@ -1,21 +1,30 @@
 <template>
   <div id="app">
+  
       <Header />
-      <Form />
+      <CardForm />
+      <Card />
       <Modal />
+      <Footer />
+      
   </div>
 </template>
 
 <script>
-import Form from './components/Form'
-import Modal from './components/Modal'
 import Header from './components/Header'
+import Card from './components/Card'
+import CardForm from './components/CardForm'
+import Modal from './components/Modal'
+import Footer from './components/Footer'
+
 
 export default {
   name: 'App',
   components: {
+    CardForm, 
+    Footer,
+    Card,
     Header,
-    Form,
     Modal
   },
   data(){
