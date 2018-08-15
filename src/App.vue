@@ -3,7 +3,7 @@
   
       <Header />
       <CardForm />
-      <Form />
+      <Card />
       <Modal />
       <Footer />
       
@@ -12,7 +12,7 @@
 
 <script>
 import Header from './components/Header'
-import Form from './components/Form'
+import Card from './components/Card'
 import CardForm from './components/CardForm'
 import Modal from './components/Modal'
 import Footer from './components/Footer'
@@ -21,9 +21,10 @@ import Footer from './components/Footer'
 export default {
   name: 'App',
   components: {
-    Form, CardForm, Footer
+    CardForm, 
+    Footer,
+    Card,
     Header,
-    Form,
     Modal
   },
   data(){

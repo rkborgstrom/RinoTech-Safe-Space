@@ -1,6 +1,6 @@
 <template>
     
-        <b-jumbotron center bg-variant="info" text-variant="white" border-variant="dark">
+        <b-jumbotron center bg-variant="active" text-variant="white" border-variant="dark">
     <template slot="header">
     Safe-Space
     </template>
@@ -15,7 +15,8 @@ export default {};
 <style>
 header {
     display: flex;
-    align-content: center;
+    justify-content: center;
+    align-items: center;
     width: 100%;
 }
 </style>
