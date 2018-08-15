@@ -2,28 +2,60 @@
   <div>
     <b-btn variant="success" v-b-modal.modal1>POST</b-btn>
     <b-modal id="modal1" title="What are you going through?">
-      <p class="my-4"></p>
-      <div>
+      <b-form>
+        <input required placeholder="Title">
+      </b-form>
+      <br />
   
-        <b-dropdown id="ddown-divider" text="Topics" class="m-2">
-          <b-dropdown-item-button>Depression</b-dropdown-item-button>
-          <b-dropdown-item-button>Anxiety</b-dropdown-item-button>
-          <b-dropdown-item-button>Stress</b-dropdown-item-button>
-          <b-dropdown-item-button>LGBT</b-dropdown-item-button>
-          <b-dropdown-item-button>PTSD</b-dropdown-item-button>
-          <b-dropdown-item-button>Alcohol</b-dropdown-item-button>
-          <b-dropdown-item-button>Marital</b-dropdown-item-button>
-          <b-dropdown-item-button>Death</b-dropdown-item-button>
-          <b-dropdown-item-button>Loneliness</b-dropdown-item-button>
-          <b-dropdown-item-button>Family Issues</b-dropdown-item-button>
-          <b-dropdown-item-button>Other</b-dropdown-item-button>
-        </b-dropdown>
-      </div>
       <div>
-        <b-form-textarea id="textarea1" v-model="text" placeholder="Tell us about it..." :rows="3" :max-rows="6">
+    <select v-model="selected">
+        <option disabled value="">Topics</option>
+        <option>Depression</option>
+        <option>Anxiety</option>
+        <option>Stress</option>
+        <option>LGBT</option>
+        <option>PTSD</option>
+        <option>Alcohol</option>
+        <option>Marital</option>
+        <option>Death</option>
+        <option>Loneliness</option>
+        <option>Family Issues</option>
+        <option>Other</option>
+    </select>
+        <br />
+        <br />
+        <span><strong>Selected:</strong> {{ selected }}</span>
+      </div>
+      <br />
+      <div>
+        <b-form-textarea id="textarea2" v-model.trim="text" placeholder="Tell us about it..." :rows="3">
         </b-form-textarea>
-        <pre class="mt-3">{{ text }}</pre>
+        <h6>We keep posts anonymous</h6>
       </div>
     </b-modal>
   </div>
 </template>
+
+<script>
+  export default {
+    data() {
+      return {
+        text: '',
+        selected: ''
+      }
+    }
+  }
+</script>
+
+<style>
+  #modal1 {
+    color: #007aff;
+  }
+
+h6{
+  color: rosybrown;
+}
+
+
+
+</style>
