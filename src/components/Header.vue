@@ -34,6 +34,6 @@
     }
 
     .navbar{
-        background-color: rgb(92, 156, 252);
+        background-color: rgb(43, 43, 43);
     }
 </style>
