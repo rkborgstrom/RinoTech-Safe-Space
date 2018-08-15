@@ -2,7 +2,6 @@
   <div id="app">
   
     <Header />
-    <CardForm />
     <Modal />
     <Footer />
   
@@ -11,7 +10,6 @@
 
 <script>
   import Header from './components/Header'
-  import CardForm from './components/CardForm'
   import Modal from './components/Modal'
   import Footer from './components/Footer'
   
@@ -20,7 +18,6 @@
   export default {
     name: 'App',
     components: {
-      CardForm,
       Header,
       Modal,
       Footer
