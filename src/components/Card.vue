@@ -12,29 +12,32 @@
                 </b-row>
             </b-container>
             <p class="card-text pl-5 pr-5">{{post.story}}</p>
-    
-            <b-container class="bv-example-row">
+            <b-container>
                 <b-row>
-    
                     <b-col>
-                        <h4>
-                            <div>
-                                <b-card @submit="onSubmit()">
-                                    <b-form-textarea id="textarea1" v-model="text" placeholder="Add a comment..." :rows="3" :max-rows="6">
-                                        {{post.comments}}
-                                    </b-form-textarea>
-                                    <pre class="mt-3">{{ text }}</pre>
-                                    <b-button href="#" variant="primary">Submit</b-button>
-                                </b-card>
-                            </div>
-                        </h4>
+                        <h6>{{post.karma}}</h6>
+                    </b-col>
+                    <b-col>
+                        <h6 class="topic">{{post.date}}</h6>
                     </b-col>
                 </b-row>
             </b-container>
+            <h4>
+                <div>
+                    <b-card @submit="onSubmit()">
+                        <b-form-textarea id="textarea1" v-model="text" placeholder="Add a comment..." :rows="3" :max-rows="6">
+                            {{post.comments}}
+                        </b-form-textarea>
+                        <pre class="mt-3">{{ text }}</pre>
+                        <b-button href="#" variant="primary">Submit</b-button>
+                    </b-card>
+                </div>
+            </h4>
+            </b-col>
+            </b-row>
+            </b-container>
         </b-card>
-        
     </div>
-    
 </template>
 
 <script>
