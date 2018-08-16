@@ -33,9 +33,6 @@
           </b-card>
         </div>
       </h4>
-      </b-col>
-      </b-row>
-      </b-container>
     </b-card>
   </div>
 </template>
