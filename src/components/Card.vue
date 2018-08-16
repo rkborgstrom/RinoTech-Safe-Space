@@ -29,7 +29,7 @@
                             {{post.comments}}
                         </b-form-textarea>
                         <pre class="mt-3">{{ text }}</pre>
-                        <b-button href="#" variant="primary">Submit</b-button>
+                        <button class="button" variant="primary">Submit</button>
                     </b-card>
                 </div>
             </h4>
@@ -41,7 +41,40 @@
     export default {
         data() {
             return {
-                text: '',
+                text: null,
+                selected: null,
+                title: null,
+                topic: null,
+                story: null
+            }
+        },
+    
+        methods: {
+            onSubmit() {
+                let newComment = {
+                    "comments": this.comments,
+                }
+                fetch('https://rinotech-safe-space.herokuapp.com/posts', {
+                        method: 'post',
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            "comments": this.comments,
+                        })
+                    })
+                    .then(res => res.json())
+                    .then(() => {
+                        this.$emit('posted')
+                    })
+            },
+            
+    
+    
+            resetForm() {
+                this.comments = null;
+                
             }
         },
         props: ['post']
@@ -61,7 +94,7 @@
         float: right;
     }
     
-    .btn-primary {
+    .button {
         color: black;
         background: linear-gradient(90deg, rgba(255, 185, 28, 1) 0%, rgba(255, 221, 58, 1) 50%, rgba(255, 215, 45, 1) 100%);
         ;

@@ -53,7 +53,6 @@
   
     methods: {
       onSubmit() {
-        console.log('hello')
         let newPost = {
           "title": this.title,
           "topic": this.topic,
