@@ -57,7 +57,7 @@
     },
     mounted() {
       fetch(this.apiURL, {
-          method: 'get',
+          method: 'post',
           headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
