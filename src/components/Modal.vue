@@ -5,12 +5,11 @@
     </section>
     <b-modal id="modal1" title="What are you going through?">
       <b-form v-on:submit.prevent='onSubmit' v-on:submit="resetForm">
-        {{post.title}}
         <input v-model="title" name="title" required placeholder="Title">
-    
+  
         <br />
         <div>
-          <select v-model="topics" name="topics">
+          <select v-model="topic" name="topic">
                 <option disabled value="">Topics</option>
                 <option>Depression</option>
                 <option>Anxiety</option>
@@ -42,51 +41,51 @@
 
 <script>
   export default {
-    props: ['post'],
-    name: "Modal",
     data() {
       return {
-        posts: [],
-        apiURL: "https://rinotech-safe-space.herokuapp.com/posts",
         text: null,
         selected: null,
         title: null,
-        topics: null,
+        topic: null,
         story: null
       }
     },
-    mounted() {
-      fetch(this.apiURL, {
-          method: 'post',
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          }
-        })
-        .then(res => res.json())
-        .then(data => {
-          this.posts = data
-          console.log(this.posts)
-        })
-    },
-
+  
     methods: {
       onSubmit() {
         console.log('hello')
         let newPost = {
           "title": this.title,
-          "topics": this.topics,
+          "topic": this.topic,
           "story": this.story
         }
-        console.log(newPost)
-        this.$emit('addPost', newPost)
+        fetch('https://rinotech-safe-space.herokuapp.com/posts', {
+            method: 'post',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              "title": this.title,
+              "topic": this.topic,
+              "story": this.story
+            })
+          })
+          .then(res => res.json())
+          .then(() => {
+            this.$emit('posted')
+          })
       },
+      //   console.log(newPost)
+  
+  
       resetForm() {
         this.title = null;
-        this.topics = null;
+        this.topic = null;
         this.story = null;
       }
     },
+    props: ['post']
   }
 </script>
 
