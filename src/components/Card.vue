@@ -1,24 +1,24 @@
 <template>
   <div>
-    <b-card class="pl-5 pr-5" header=" " header-text-variant="white" header-tag="header" header-bg-variant="dark" footer="Karma Score" footer-tag="footer" footer-bg-variant="dark" footer-border-variant="dark">
+    <b-card header=" " header-text-variant="white" header-tag="header" header-bg-variant="dark" footer=" " footer-tag="footer" footer-bg-variant="dark" footer-border-variant="dark">
       <b-container class="bv-example-row">
         <b-row>
           <b-col>
             <h2>{{post.title}}</h2>
           </b-col>
           <b-col>
-            <h4 class="topic">{{post.topic}}</h4>
+            <h4 class="topic">Topic: {{post.topic}}</h4>
           </b-col>
         </b-row>
       </b-container>
-      <p class="card-text pl-5 pr-5">{{post.story}}</p>
+      <p class="card-text pl-5 pr-5">Message: {{post.story}}</p>
       <b-container>
         <b-row>
           <b-col>
-            <h6>{{post.karma}}</h6>
+            <h6>Karma Score: {{post.karma}}</h6>
           </b-col>
           <b-col>
-            <h6 class="topic">{{post.date}}</h6>
+            <h6 class="topic"> Data Posted: {{post.date}}</h6>
           </b-col>
         </b-row>
       </b-container>
@@ -34,6 +34,7 @@
         </div>
       </h4>
     </b-card>
+    <br>
   </div>
 </template>
 
@@ -50,7 +51,10 @@
 
 <style>
   .card {
-    max-width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
   }
   
   h4 {
