@@ -111,7 +111,7 @@
   }
   
   .btn-primary {
-    display: none;
+    display: none !important;
   }
   
   .btn-success {
