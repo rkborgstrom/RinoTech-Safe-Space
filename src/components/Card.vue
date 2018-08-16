@@ -32,7 +32,9 @@
                 </b-row>
             </b-container>
         </b-card>
+        
     </div>
+    
 </template>
 
 <script>

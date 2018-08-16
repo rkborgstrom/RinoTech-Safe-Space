@@ -11,11 +11,6 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'Footer',
-      component: Footer
-    },
-    {
       path: '/App',
       name: 'Header',
       component: Header
@@ -30,6 +25,11 @@ export default new Router({
       path: '/',
       name: 'Modal',
       component: Modal
+    },
+    {
+      path: '/',
+      name: 'Footer',
+      component: Footer
     },
   ]
 })
