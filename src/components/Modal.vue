@@ -6,7 +6,6 @@
     <b-modal id="modal1" title="What are you going through?">
       <b-form v-on:submit.prevent='onSubmit' v-on:submit="resetForm">
         <input v-model="title" name="title" required placeholder="Title">
-  
         <br />
         <div>
           <select v-model="topic" name="topic">
