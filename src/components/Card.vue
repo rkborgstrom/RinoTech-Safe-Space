@@ -24,7 +24,7 @@
           </b-col>
           <b-col>
           <br>
-            <h6 class="topic"> Data Posted: {{post.date}}</h6>
+            <h6 class="topic"> Date Posted: {{Date(post.date)}}</h6>
             <br>
           </b-col>
         </b-row>
