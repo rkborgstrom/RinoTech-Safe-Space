@@ -6,6 +6,7 @@
         <b-row>
           <b-col>
             <h3>{{post.title}}</h3>
+
           </b-col>
           <b-col>
             <h3 class="topic">Topic: {{post.topic}}</h3>
@@ -13,13 +14,18 @@
         </b-row>
       </b-container>
       <p class="pl-5 card-text">Message: {{post.story}}</p>
+
       <b-container>
         <b-row>
           <b-col>
-            <h6>Karma Score: {{post.karma}}</h6>
+            <h3 class="karma" v-on:click="counter += 1"> + </h3>
+              <h6>Karma Score: {{counter}}</h6>
+            <h3 class="karma" v-on:click="counter -= 1"> - </h3>
           </b-col>
           <b-col>
+          <br>
             <h6 class="topic"> Data Posted: {{post.date}}</h6>
+            <br>
           </b-col>
         </b-row>
       </b-container>
@@ -44,6 +50,14 @@
     data() {
       return {
         text: '',
+        counter: 0
+      }
+    },
+    update: {
+      deleteCard(){
+        if (counter <= -5){
+          console.log('hi')
+        }
       }
     },
     props: ['post']
@@ -67,5 +81,14 @@
     color: black;
     background: linear-gradient(90deg, rgba(255, 185, 28, 1) 0%, rgba(255, 221, 58, 1) 50%, rgba(255, 215, 45, 1) 100%);
     ;
+  }
+
+  .karma {
+    display: flex;
+    padding-left: 50px;
+  }
+
+  .postTitle {
+    padding-left: 6%;
   }
 </style>
