@@ -1,9 +1,38 @@
-# rinotech-group-project
+![Safe Space](https://user-images.githubusercontent.com/38636581/44279862-4c6a2000-a210-11e8-8f06-ec88cafae346.png)
+___
+# Rinotech: Safe Space
+SafeSpace, a place where people from all walks of life to come together to discuss what their going through and also for others to give guidance along the way.
+___
+## Live Demos:
+Front end deployed **[here](https://rinotech-safespace.firebaseapp.com/#/)**
+Back end deployed **[here](https://rinotech-safe-space.herokuapp.com/)**
 
-FE Deployed link:  https://rinotech-safespace.firebaseapp.com/#/
-BE Deployed link:  https://rinotech-safe-space.herokuapp.com/
-Github BE link: https://github.com/rusticpenguin/RinoTech-Group-Project-Backend
+## Contributors:
+ - [Eldon Dahlin](https://github.com/end1989)
+ - [Tiffany Ricks](https://github.com/tricks7)
+ - [Thomas Lee](https://github.com/Tomwolverine)
+ - [Ryan Borgstrom](https://github.com/rkborgstrom)
+ - [George Chios](https://github.com/rusticpenguin)
 
+### Technologies used:
+
+ - Front end: Vue.js, bootstrap-vue
+ - Back end: MongoDB, Express, Mongoose, Bodyparser, EJS, CORS, Passport
+
+### About the product:
+ - User opens the app
+ - User clicks post button
+ - User is greeted with a form 
+ - User picks a topic for what they are going through
+ - Usery types out their story
+ - User submits post the anonymously 
+ - Up-vote and down-vote system for the community to self regulate
+ - Anonymously allows users to deal with issues in a *safe space*
+
+### Back End Repo:
+Check out our back end repo **[here](https://github.com/rusticpenguin/RinoTech-Group-Project-Backend)**.
+
+___
 
 ## Build Setup
 
