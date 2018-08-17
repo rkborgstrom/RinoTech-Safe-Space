@@ -1,19 +1,20 @@
 <template>
   <div>
+    <br>
     <b-card header=" " header-text-variant="white" header-tag="header" header-bg-variant="dark" footer=" " footer-tag="footer" footer-bg-variant="dark" footer-border-variant="dark">
       <b-container class="bv-example-row">
         <b-row>
           <b-col>
-            <h2 class="postTitle">{{post.title}}</h2>
+            <h3>{{post.title}}</h3>
+
           </b-col>
           <b-col>
-            <h4 class="topic">Topic: {{post.topic}}</h4>
+            <h3 class="topic">Topic: {{post.topic}}</h3>
           </b-col>
         </b-row>
       </b-container>
-              <hr>
-      <p class="card-text pl-5 pr-5">Message: {{post.story}}</p>
-              <hr/>
+      <p class="pl-5 card-text">Message: {{post.story}}</p>
+
       <b-container>
         <b-row>
           <b-col>
@@ -71,12 +72,9 @@
     width: 85%;
   }
   
-  h4 {
-    color: grey;
-  }
-  
   .topic {
     float: right;
+    color: grey;
   }
   
   .btn-primary {
