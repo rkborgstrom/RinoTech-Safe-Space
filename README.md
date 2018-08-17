@@ -14,12 +14,12 @@ Back end deployed **[here](https://rinotech-safe-space.herokuapp.com/)**
  - [Ryan Borgstrom](https://github.com/rkborgstrom)
  - [George Chios](https://github.com/rusticpenguin)
 
-### Technologies used:
+## Technologies used:
 
  - Front end: Vue.js, bootstrap-vue
  - Back end: MongoDB, Express, Mongoose, Bodyparser, EJS, CORS, Passport
 
-### About the product:
+## About the product:
  - User opens the app
  - User clicks post button
  - User is greeted with a form 
@@ -29,7 +29,7 @@ Back end deployed **[here](https://rinotech-safe-space.herokuapp.com/)**
  - Up-vote and down-vote system for the community to self regulate
  - Anonymously allows users to deal with issues in a *safe space*
 
-### Back End Repo:
+## Back End Repo:
 Check out our back end repo **[here](https://github.com/rusticpenguin/RinoTech-Group-Project-Backend)**.
 
 ___
