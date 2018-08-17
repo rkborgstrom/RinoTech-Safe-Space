@@ -1,6 +1,9 @@
 # rinotech-group-project
 
-> Y
+FE Deployed link:  https://rinotech-safespace.firebaseapp.com/#/
+BE Deployed link:  https://rinotech-safe-space.herokuapp.com/
+Github BE link: https://github.com/rusticpenguin/RinoTech-Group-Project-Backend
+
 
 ## Build Setup
 
