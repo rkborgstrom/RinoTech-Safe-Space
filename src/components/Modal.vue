@@ -7,24 +7,25 @@
       <b-form v-on:submit.prevent='onSubmit' v-on:submit="resetForm">
         <input v-model="title" name="title" required placeholder="Title">
         <br />
+        <br>
         <div>
           <select v-model="topic" name="topic">
-                <option disabled value="">Topics</option>
-                <option>Depression</option>
-                <option>Anxiety</option>
-                <option>Stress</option>
-                <option>LGBT</option>
-                <option>PTSD</option>
-                <option>Alcohol</option>
-                <option>Marital</option>
-                <option>Death</option>
-                <option>Loneliness</option>
-                <option>Family Issues</option>
-                <option>Other</option>
-            </select>
+                  <option disabled value="">Topics</option>
+                  <option>Depression</option>
+                  <option>Anxiety</option>
+                  <option>Stress</option>
+                  <option>LGBT</option>
+                  <option>PTSD</option>
+                  <option>Alcohol</option>
+                  <option>Marital</option>
+                  <option>Death</option>
+                  <option>Loneliness</option>
+                  <option>Family Issues</option>
+                  <option>Other</option>
+              </select>
           <br />
           <br />
-          <span><strong>Selected:</strong> {{ selected }}</span>
+
         </div>
         <br />
         <div>
@@ -32,7 +33,7 @@
           </b-form-textarea>
           <h6>We keep posts anonymous</h6>
         </div>
-        <b-button name="submit" value="submit" type="submit" variant="success">Submit</b-button>
+        <b-button name="submit" value="submit" type="submit" variant="warning">Submit</b-button>
       </b-form>
     </b-modal>
   </div>

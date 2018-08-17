@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
     <Modal v-on:posted="getPosts" v-bind:post="posts" />
-    <Card  v-for="post in posts" :key="post.id" v-bind:post="post" />
+    <Card v-for="post in posts" :key="post.id" v-bind:post="post" />
     <Footer />
   </div>
 </template>
