@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
     <Modal v-on:posted="getPosts" v-bind:post="posts" />
-    <Card  v-for="post in posts" :key="post.id" v-bind:post="post" />
+    <Card  v-on:posted="getPosts" v-for="post in posts" :key="post.id" v-bind:post="post" />
     <Footer />
   </div>
 </template>
@@ -27,7 +27,6 @@
   
     methods: {
       getPosts() {
-        console.log('yooo')
         fetch(this.apiURL, {
             method: 'get',
             headers: {

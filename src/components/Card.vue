@@ -44,8 +44,27 @@
         text: '',
       }
     },
+    methods(){
+      let newComment = {
+        'comments': this.comments
+      }
+    fetch('https://rinotech-safe-space.herokuapp.com/posts', {
+            method: 'post',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              'comments': this.comments,
+            })
+          })
+          .then(res => res.json())
+          .then(() => {
+            this.$emit('newComments')
+          })
     props: ['post']
   }
+}
 </script>
 
 <style>
