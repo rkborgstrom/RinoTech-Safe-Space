@@ -37,7 +37,7 @@
           })
           .then(res => res.json())
           .then(data => {
-            this.posts = data
+            this.posts = data.reverse()
             console.log(this.posts)
           })
       }
